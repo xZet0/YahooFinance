@@ -2,9 +2,8 @@ name: Daily Finance Scraper
 
 on:
   schedule:
-    # Runs at 08:00 UTC every day.
-    # You can change this using cron syntax. Example: '0 8 * * *' = 8am UTC
-    - cron: "0 8 * * *"
+    # Runs every 4 hours (00:00, 04:00, 08:00, 12:00, 16:00, 20:00 UTC)
+    - cron: "0 */4 * * *"
   workflow_dispatch: # Allows you to click "Run workflow" manually in GitHub Actions tab
 
 jobs:
